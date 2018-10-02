@@ -34,7 +34,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7x-E6-1zD">
                                 <rect key="frame" x="118" y="160" width="138" height="41"/>
@@ -82,7 +82,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8b-vp-sXC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e8b-vp-sXC">
                                 <rect key="frame" x="75" y="315" width="225" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="VBX-eR-aDD"/>
@@ -91,16 +91,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7NI-yw-3Dn">
+                                <rect key="frame" x="112" y="70" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="9af-3t-KCP"/>
+                                    <constraint firstAttribute="width" constant="150" id="cQU-vG-CuV"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7NI-yw-3Dn" firstAttribute="centerX" secondItem="1QB-nc-GcM" secondAttribute="centerX" id="76B-8f-fHv"/>
                             <constraint firstItem="e8b-vp-sXC" firstAttribute="centerY" secondItem="1QB-nc-GcM" secondAttribute="centerY" id="Q9V-aY-MLd"/>
                             <constraint firstItem="4iw-2o-Tl9" firstAttribute="trailing" secondItem="e8b-vp-sXC" secondAttribute="trailing" constant="75" id="UKg-nj-31Z"/>
                             <constraint firstItem="e8b-vp-sXC" firstAttribute="leading" secondItem="4iw-2o-Tl9" secondAttribute="leading" constant="75" id="byC-Al-YsN"/>
+                            <constraint firstItem="7NI-yw-3Dn" firstAttribute="top" secondItem="4iw-2o-Tl9" secondAttribute="top" constant="50" id="wKu-xk-tSr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4iw-2o-Tl9"/>
                     </view>
                     <connections>
+                        <outlet property="avatarView" destination="7NI-yw-3Dn" id="EP2-W4-XIt"/>
                         <outlet property="greetingLabel" destination="e8b-vp-sXC" id="O82-Zv-Hhw"/>
                     </connections>
                 </viewController>
